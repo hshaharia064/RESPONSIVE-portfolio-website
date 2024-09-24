@@ -21,12 +21,14 @@ body {
     height: 8vh;
     background-color: #091535;
     align-items: center;
-    justify-content: space-between; /* Added to space out the elements */
+    justify-content: space-between;
+    /* Added to space out the elements */
     box-sizing: border-box;
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 0 1em;}
+    padding: 0 1em;
+}
 
 /* navbar items */
 
@@ -37,7 +39,7 @@ body {
     box-sizing: border-box;
 }
 
-.nav ul{
+.nav ul {
     display: flex;
 }
 
@@ -144,11 +146,11 @@ h1 {
     height: 100vh;
     width: 100%;
     background-color: #091535;
-   
+
     padding: 1em;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: .5em;
     justify-content: center;
     box-sizing: border-box;
@@ -157,7 +159,7 @@ h1 {
 
 }
 
-.box{
+.box {
 
     border: .0001em solid white;
     color: white;
@@ -166,12 +168,12 @@ h1 {
     padding: 1em;
     border-radius: 2em;
     opacity: 0.5;
-    
+
 }
 
 /* section3 */
 
-.section3{
+.section3 {
 
     height: 100vh;
     width: 100%;
@@ -183,17 +185,17 @@ h1 {
 
 }
 
-.photo{
+.photo {
 
-    height: 100vh ;
+    height: 100vh;
     width: 50%;
     background: transparent;
     padding: 4em;
     box-sizing: border-box;
-   
+
 }
 
-img{
+img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -203,20 +205,21 @@ img{
     transform: translateX(-5em);
 }
 
-@keyframes fadeInSlideleft{
-   0%{
-    opacity: 0;
-    transform: translateX(-5em) ;
-   }
-   100%{
-    opacity: 1;
-    transform: translateX(0);
-   }
+@keyframes fadeInSlideleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-5em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 
 }
 
 
-.about{
+.about {
 
     height: 100vh;
     width: 50%;
@@ -226,51 +229,65 @@ img{
     color: white;
     display: flex;
     align-items: center;
-    
 
-   
+
+
 }
-p{
+
+p {
     word-spacing: .3em;
     animation: fadeInSlideright 1s ease-in-out forwards;
     transform: translateX(+5em);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-@keyframes fadeInSlideright{
 
-    0%{
+@keyframes fadeInSlideright {
+
+    0% {
         opacity: 0;
         transform: translateX(+5em);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
 
 }
 
-span{
+span {
     font-size: xx-large;
-    
+
 }
 
 
 @media (max-width: 768px) {
     .nav ul li {
-        margin: 0 1em; /* Reduce margin on smaller screens */
+        margin: 0 1em;
+        /* Reduce margin on smaller screens */
+    }
+
+    .nav {
+        width: 100%;
     }
 
     h1 {
-        font-size: 36px; /* Smaller font size on smaller screens */
+        font-size: 36px;
+        /* Smaller font size on smaller screens */
     }
 
     .btn {
-        width: 8em; /* Adjust button size for smaller screens */
+        width: 8em;
+        /* Adjust button size for smaller screens */
+        margin-right: auto;
+        width: 5em;
     }
 
-    .photo, .about {
+    .photo,
+    .about {
         width: 100%;
-        height: auto; /* Stack photo and about sections vertically */
+        height: auto;
+        /* Stack photo and about sections vertically */
     }
 
     .hero {
@@ -278,16 +295,23 @@ span{
     }
 
     .grid {
-        height: auto; /* Allow grid to adjust height based on content */
+        height: auto;
+        /* Allow grid to adjust height based on content */
     }
-    .section3{
+
+    .section3 {
         flex-direction: column;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
     .nav ul li {
-        margin: 0 0.5em; /* Even smaller margin for very small screens */
+        margin: 0 0.5em;
+        /* Even smaller margin for very small screens */
+    }
+
+    .nav {
+        width: 100%;
     }
 
     h1 {
@@ -296,16 +320,83 @@ span{
 
     .btn {
         width: 7em;
-        font-size: 0.9em; /* Adjust button size and font */
+        font-size: 0.9em;
+        /* Adjust button size and font */
+        margin-right: auto;
+        width: 5em;
+
     }
 
-    .photo, .about {
-        padding: 1em; /* Reduce padding on smaller devices */
-       
-    
+    .photo,
+    .about {
+        padding: 1em;
+        /* Reduce padding on smaller devices */
+
+
     }
-    .section3{
+
+    .section3 {
         flex-direction: column;
     }
+
+}
+
+@media (max-width: 320px) {
+    .nav {
+
+        width: 350px;
+       
+
+
+    }
+
+    .nav ul li{
+        margin: 2px ;
+        font-size: x-small;
+        padding: 2px;
+    }
+
+    .btn{
+
+        width: 3em;
+        font-size: x-small;
+
+
+
+    }
+
+
+}
+@media (max-width: 360px) {
+    .nav {
+
+        width: 360px;
+        height: 40px;
+       
+
+
+    }
+
+    .nav ul li{
+        margin: 2px ;
+        font-size: x-small;
+        padding: 2px;
+    }
+
+    .btn{
+
+        width: 3em;
+        height: 2em;
+        font-size: x-small;
+
+
+
+    }
+
+    h1{
+
+        font-size: 24px;
+    }
+
 
 }
